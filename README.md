@@ -16,4 +16,3 @@
 - Install it and open it, Log in usign **USername** and **Password** --> Select your domain from the list --> Save --> Go to Preferances --> Select run auto. on boot up and log on.
 - Now it's done. On the start of your server after few minues. your IP will be updated automatically to the domain.
 - Now you have to use that configured domain to connect to your server.
-- 
