@@ -8,11 +8,12 @@
 - We need to install softeware to our server, and it will automatically update domain ip if it changes.
 
 # Steps:
-- Go to: noip.com
+- Go to: www.noip.com
 - Create account (create account instead of using google login) Do the varification and Add username from profile section.
 - Go to Dynamic DNS --> No-IP Hostnames --> Create Hostname --> Select name and domain for the DDNS, Put your server ip as A records..
-- Go your serve and then following website: https://www.noip.com/download?page=win
+- Go your serve and then following website: https://www.noip.com/download?page=win , https://www.noip.com/download?page=linux
 - Donwload application on your server. You can find it for Windows, ubuntu and other servers.
 - Install it and open it, Log in usign **USername** and **Password** --> Select your domain from the list --> Save --> Go to Preferances --> Select run auto. on boot up and log on.
 - Now it's done. On the start of your server after few minues. your IP will be updated automatically to the domain.
 - Now you have to use that configured domain to connect to your server.
+- 
