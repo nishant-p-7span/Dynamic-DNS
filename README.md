@@ -29,3 +29,41 @@
   ```
   sudo systemctl status cron
   ```
+## INstead of running every 5 miniutes, set up to run at server boot up.
+- Create the systemd service file:
+  ```
+  sudo nano /etc/systemd/system/update-dns.service
+  ```
+- Add the configuration:
+  ```
+  [Unit]
+  Description=Update Route 53 DNS with Public IP
+  After=network.target
+  
+  [Service]
+  ExecStart=/usr/bin/python3 /home/ubuntu/ddns.py
+  WorkingDirectory=/home/ubuntu/
+  StandardOutput=inherit
+  StandardError=inherit
+  Restart=always
+  User=ubuntu
+  
+  [Install]
+  WantedBy=multi-user.target
+  ```
+- Reload systemd:
+  ```
+  sudo systemctl daemon-reload
+  ```
+- Enable the service:
+  ```
+  sudo systemctl enable update-dns.service
+  ```
+- Start the service:
+  ```
+  sudo systemctl start update-dns.service
+  ```
+- Check the service status:
+  ```
+  sudo systemctl status update-dns.service
+  ```
